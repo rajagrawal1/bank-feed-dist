@@ -84,8 +84,8 @@ A bank:
 | `name` | The registry name, in RBI's or DICGC's spelling. |
 | `aka` | Other names for search: short forms, banks it absorbed, other spellings. |
 | `sms_names` | Sender names that banks use in SMS for this bank. Usually empty. |
-| `type` | `psb` (public sector), `private`, `small_finance`, `payments`, `ucb` (urban co-operative), `stcb` (state co-operative), `dccb` (district central co-operative). |
-| `state`, `city` | Co-operative banks only, from DICGC's list; else `null`. |
+| `type` | `psb` (public sector), `private`, `small_finance`, `payments`, `ucb` (urban co-operative), `stcb` (state co-operative), `dccb` (district central co-operative), `rrb` (regional rural bank, added 2026-11-27; a reader that does not know a type shows no type line). |
+| `state`, `city` | Co-operative banks and regional rural banks, from DICGC's list; else `null`. `state` is set for every regional rural bank; `city` only where DICGC names a town. |
 | `insured` | `true`: on DICGC's insured-banks list of `checked.dicgc_insured_list`. `false`: not on it. `null`: not matched to the list, so nothing is said. |
 | `status` | `active`, `merged`, `licence_cancelled`. |
 | `status_source` | `rbi_release` or `dicgc_list`; `null` when active. |
@@ -124,4 +124,4 @@ included.
 ## What is not here
 
 Only RBI press releases and DICGC lists are sources. No ratings, scores, predictions, share prices, court cases or
-agency investigations, and no news text. Foreign banks and regional rural banks are not in the registry yet.
+agency investigations, and no news text. Foreign banks are not in the registry yet; regional rural banks are (since 2026-11-27).
